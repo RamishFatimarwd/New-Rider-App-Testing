@@ -1,12 +1,12 @@
-version: 2
-jobs:
+version: 2.1
+orbs:
+  cypress: cypress-io/cypress@1
+workflows:
   build:
-    docker:
-      - image: cypress/base:14.16.0
-        environment:
-          ## this enables colors in the output
-          TERM: xterm
-    working_directory: ~/app
-    steps:
-      - run: npm install package.json
-      - run: npx cypress/run
+    jobs:
+      - cypress/install:
+          pre-steps:
+            - run: npm install package.json
+      - cypress/run:
+          requires:
+            - cypress/install
