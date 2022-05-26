@@ -10,6 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^9.6.1"
+    "cypress": "^9.6.1",
+    "minimist": "^1.2.5",
+    "mocha": "^8.3.2",
+    "mochawesome": "^6.2.2",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.2.0",
+    "package.json": "^2.0.1"
   }
 }
