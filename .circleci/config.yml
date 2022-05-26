@@ -9,4 +9,4 @@ jobs:
     working_directory: ~/app
     steps:
       - run: npm install package.json
-      - run: npm cypress/run
+      - run: npx cypress/run
